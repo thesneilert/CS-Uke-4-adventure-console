@@ -1,0 +1,47 @@
+C:\Users\pexil\Documents\GitHub\Adventure Console\bin\Debug\net8.0\Adventure Console.exe
+C:\Users\pexil\Documents\GitHub\Adventure Console\bin\Debug\net8.0\Adventure Console.deps.json
+C:\Users\pexil\Documents\GitHub\Adventure Console\bin\Debug\net8.0\Adventure Console.runtimeconfig.json
+C:\Users\pexil\Documents\GitHub\Adventure Console\bin\Debug\net8.0\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\Adventure Console\bin\Debug\net8.0\Adventure Console.pdb
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.csproj.AssemblyReference.cache
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.AssemblyInfoInputs.cache
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.AssemblyInfo.cs
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.csproj.CoreCompileInputs.cache
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\refint\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.pdb
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\Adventure Console.genruntimeconfig.cache
+C:\Users\pexil\Documents\GitHub\Adventure Console\obj\Debug\net8.0\ref\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\bin\Debug\net8.0\Adventure Console.exe
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\bin\Debug\net8.0\Adventure Console.deps.json
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\bin\Debug\net8.0\Adventure Console.runtimeconfig.json
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\bin\Debug\net8.0\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\bin\Debug\net8.0\Adventure Console.pdb
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.csproj.AssemblyReference.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.AssemblyInfoInputs.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.AssemblyInfo.cs
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.csproj.CoreCompileInputs.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\refint\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.pdb
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\Adventure Console.genruntimeconfig.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\obj\Debug\net8.0\ref\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console\bin\Debug\net8.0\text\IntroScreen.txt
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\bin\Debug\net8.0\Adventure Console.exe
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\bin\Debug\net8.0\text\IntroScreen.txt
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\bin\Debug\net8.0\Adventure Console.deps.json
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\bin\Debug\net8.0\Adventure Console.runtimeconfig.json
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\bin\Debug\net8.0\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\bin\Debug\net8.0\Adventure Console.pdb
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.csproj.AssemblyReference.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.AssemblyInfoInputs.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.AssemblyInfo.cs
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.csproj.CoreCompileInputs.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\refint\Adventure Console.dll
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.pdb
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\Adventure Console.genruntimeconfig.cache
+C:\Users\pexil\Documents\GitHub\CS-Uke-4-adventure-console.2\obj\Debug\net8.0\ref\Adventure Console.dll
