@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pexil\\Documents\\GitHub\\CS-Uke-4-adventure-console.2\\Adventure Console.csproj",
+      "projectUniqueName": "C:\\Users\\pexil\\Documents\\GitHub\\CS-Uke-4-adventure-console\\Adventure Console.csproj",
       "projectName": "Adventure Console",
-      "projectPath": "C:\\Users\\pexil\\Documents\\GitHub\\CS-Uke-4-adventure-console.2\\Adventure Console.csproj",
+      "projectPath": "C:\\Users\\pexil\\Documents\\GitHub\\CS-Uke-4-adventure-console\\Adventure Console.csproj",
       "packagesPath": "C:\\Users\\pexil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pexil\\Documents\\GitHub\\CS-Uke-4-adventure-console.2\\obj\\",
+      "outputPath": "C:\\Users\\pexil\\Documents\\GitHub\\CS-Uke-4-adventure-console\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pexil\\AppData\\Roaming\\NuGet\\NuGet.Config",

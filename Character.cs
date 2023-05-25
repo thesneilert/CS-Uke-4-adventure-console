@@ -3,11 +3,9 @@
 public class Character
 {
     public string Username { get; set; }
-    public string Race { get; set; }
     
-    public Character(string username, string race)
+    public Character(string username)
     {
         Username = username;
-        Race = race;
     }
 }

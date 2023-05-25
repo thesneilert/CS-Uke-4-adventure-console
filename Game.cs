@@ -6,28 +6,24 @@ internal enum GameMenu
     MainMenu,
     CreateCharacter,
     ConfirmCharacterCreation,
-    LoadSaveGame,
     GameMenu,
     MineStone,
     Shop,
     IntroScreen
 }
 
-public enum Race
-{
-    Human,
-    Gnome,
-    Troll
-}
-
 internal class Game
 {
     private GameMenu _currentMenu;
     private readonly List<Character> _characters = new();
+    private int _selectedOption;
+    private readonly MenuRenderer _menuRenderer;
 
     public Game()
     {
         _currentMenu = GameMenu.MainMenu;
+        _selectedOption = 1;
+        _menuRenderer = new MenuRenderer();
     }
 
     public void Run()
@@ -41,28 +37,16 @@ internal class Game
                 case GameMenu.CreateCharacter:
                     ShowCreateCharacter();
                     break;
-                case GameMenu.ConfirmCharacterCreation:
-                    ConfirmCharacterCreation();
-                    break;
-                case GameMenu.LoadSaveGame:
-                    //ShowLoadSaveGame();
-                    break;
                 case GameMenu.GameMenu:
                     ShowGameMenu();
                     break;
-                case GameMenu.MineStone:
-                    //MineStone();
-                    break;
-                case GameMenu.Shop:
-                    //VisitShop();
-                    break;
                 case GameMenu.IntroScreen:
-                    IntroScreen();
+                    ShowIntroScreen();
                     break;
             }
     }
 
-    private void ShowMainMenu()
+    public void ShowMainMenu()
     {
         Console.Clear();
         Console.ForegroundColor = ConsoleColor.Gray;
@@ -71,61 +55,46 @@ internal class Game
         Console.WriteLine(Ascii.AdventureConsoleTittleText);
         Console.WriteLine(Ascii.ByTheSneilertTextandPerson);
         Console.ResetColor();
-        Console.WriteLine("1. Create a new character");
-        Console.WriteLine("2. Load save game (not working)");
-        Console.WriteLine("3. Exit game");
-        Console.Write("\nEnter your choice: ");
+        RenderMainMenu();
 
-        var choice = GetChoice(3);
-        switch (choice)
+        var keyInfo = Console.ReadKey();
+        switch (keyInfo.Key)
         {
-            case 1:
-                _currentMenu = GameMenu.CreateCharacter;
+            case ConsoleKey.UpArrow:
+                if (_selectedOption > 1)
+                    _selectedOption--;
                 break;
-            case 2:
-                _currentMenu = GameMenu.LoadSaveGame;
+            case ConsoleKey.DownArrow:
+                if (_selectedOption < 2)
+                    _selectedOption++;
                 break;
-            case 3:
-                _currentMenu = GameMenu.ExitGame;
+            case ConsoleKey.Enter:
+                switch (_selectedOption)
+                {
+                    case 1:
+                        _currentMenu = GameMenu.CreateCharacter;
+                        break;
+                    case 2:
+                        _currentMenu = GameMenu.ExitGame;
+                        break;
+                }
+
                 break;
         }
+    }
+
+    private void RenderMainMenu()
+    {
+        string[] options =
+        {
+            "Create a new character",
+            "Exit game"
+        };
+
+        _menuRenderer.RenderMenuOptions(options, _selectedOption);
     }
 
     private void ShowCreateCharacter()
-    {
-        //handling clean and title
-        Console.Clear();
-        _currentMenu = GameMenu.GameMenu;
-        Console.ForegroundColor = ConsoleColor.Blue;
-        Console.WriteLine(Ascii.CreateCharacterText);
-        Console.ResetColor();
-
-        //name
-        Console.Write("\n\nEnter your name:");
-        var username = Console.ReadLine();
-
-        //race
-        Console.WriteLine("\nChoose your race:");
-        Console.WriteLine("1. Human");
-        Console.WriteLine("2. Gnome");
-        Console.WriteLine("3. Troll");
-        Console.Write("\nEnter your choice:");
-        var raceChoice = GetChoice(3);
-        var race = (Race)(raceChoice - 1);
-
-        //add user to list
-        if (username != null)
-        {
-            var newCharacter = new Character(username, race.ToString());
-            _characters.Add(newCharacter);
-        }
-
-        //clear og confirm
-        Console.Clear();
-        ConfirmCharacterCreation();
-    }
-
-    private void ConfirmCharacterCreation()
     {
         Console.Clear();
         _currentMenu = GameMenu.ConfirmCharacterCreation;
@@ -133,71 +102,74 @@ internal class Game
         Console.WriteLine(Ascii.CreateCharacterText);
         Console.ResetColor();
 
-        Console.WriteLine($"\n\nAre you a {_characters[0].Race} named {_characters[0].Username}?");
-        Console.Write("\nYes or No:");
-        var choice = Console.ReadLine();
+        Console.Write("\n\nEnter your name: ");
+        var username = Console.ReadLine();
 
-        if (choice?.ToLower() == "yes")
-            IntroScreen();
-        else if (choice.ToLower() == "no")
+        if (username != null)
         {
-            _characters[0].Race = string.Empty;
-            _characters[0].Username = string.Empty;
-            ShowCreateCharacter();
+            var newCharacter = new Character(username);
+            _characters.Add(newCharacter);
         }
-        else
+
+        Console.WriteLine($"\nAre you sure you have entered your name correctly as {_characters[0].Username}?\n");
+        RenderCreateCharacterMenu();
+
+        var keyInfo = Console.ReadKey();
+        switch (keyInfo.Key)
         {
-            ConfirmCharacterCreation();
+            case ConsoleKey.UpArrow:
+                if (_selectedOption > 1)
+                    _selectedOption--;
+                break;
+            case ConsoleKey.DownArrow:
+                if (_selectedOption < 2)
+                    _selectedOption++;
+                break;
+            case ConsoleKey.Enter:
+                switch (_selectedOption)
+                {
+                    case 1:
+                        _currentMenu = GameMenu.IntroScreen;
+                        break;
+                    case 2:
+                        _characters.RemoveAt(0);
+                        _currentMenu = GameMenu.CreateCharacter;
+                        break;
+                }
+                break;
         }
     }
+
+
+    private void RenderCreateCharacterMenu()
+    {
+        string[] options =
+        {
+            "Yes",
+            "No"
+        };
+
+        _menuRenderer.RenderMenuOptions(options, _selectedOption);
+    }
     
-    private void IntroScreen()
+
+    private void ShowIntroScreen()
     {
         Console.Clear();
         _currentMenu = GameMenu.IntroScreen;
 
-        string text = File.ReadAllText("text/IntroScreen.txt");
-        string username = _characters[0].Username;
-        text = text.Replace("{username}", username);
-        Console.WriteLine(text);
+        Console.Write(Text.IntroText());
 
         Console.Write("\n\nPress any key to continue...");
         Console.ReadLine();
         ShowGameMenu();
     }
-    
+
     public void ShowGameMenu()
     {
         Console.Clear();
         _currentMenu = GameMenu.GameMenu;
-        Console.WriteLine("heihei");
+        Console.WriteLine("Game Menu");
         Console.ReadKey();
     }
-
-
-    /*--------------------------------------------------------------------------------------------------------------
-                           chatGPT MAGIC for å ikke lage ny linje ved feil typing*/
-    private int GetChoice(int maxChoice)
-    {
-        int choice;
-        var topCursorPosition = Console.CursorTop;
-        ConsoleKeyInfo keyInfo;
-
-        do
-        {
-            keyInfo = Console.ReadKey();
-            if (keyInfo.Key == ConsoleKey.Enter)
-            {
-                Console.WriteLine(); // Move to the next line
-                Console.SetCursorPosition(0, topCursorPosition); // Move the cursor back to the top
-                Console.Write("Invalid choice. Please try again: "); // Overwrite the line
-            }
-            else if (int.TryParse(keyInfo.KeyChar.ToString(), out choice) && choice >= 1 && choice <= maxChoice)
-            {
-                Console.WriteLine(); // Move to the next line
-                return choice;
-            }
-        } while (true);
-    }
-    /*--------------------------------------------------------------------------------------------------------------*/
 }
